@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     
-    $to = "kadeshbanear@gmail.com";
+    $to = "enter email here";
     
     // Basic sanitization
     $name = strip_tags(trim($_POST["name"]));
