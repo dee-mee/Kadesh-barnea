@@ -379,34 +379,11 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form id="quoteForm">
-                            <input type="hidden" name="csrf_token" value="">
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <select name="service" class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Cyber & Branding</option>
-                                        <option value="2">Agribusiness - Cereal Trading</option>
-                                        <option value="3">Mobile Banking Services</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12" style="display:none;">
-                                    <input type="text" name="honeypot" value="" style="display:none;">
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="bg-dark rounded p-5 text-center">
+                            <h3 class="text-white mb-4">Request A Quote</h3>
+                            <p class="text-white mb-4">Click below to send your request. Please include the service you are interested in (Agribusiness or Wealth Management).</p>
+                            <a href="mailto:kadeshbanear@gmail.com?subject=Quote Request&body=Name: %0AEmail: %0AService: %0AMessage: " class="btn btn-primary w-100 py-3">Request Quote via Email</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -543,12 +520,9 @@
                             <h1 class="m-0 text-white">Kadesh Barnea</h1>
                         </a>
                         <p class="mt-3 mb-4">Empowering individuals, institutions, and small businesses through accessible cyber services, quality agricultural products, and reliable mobile banking solutions.</p>
-                        <form id="newsletterForm">
-                            <div class="input-group">
-                                <input type="email" name="email" class="form-control border-white p-3" placeholder="Your Email" required>
-                                <button class="btn btn-dark" type="submit">Sign Up</button>
-                            </div>
-                        </form>
+                        <div class="p-1">
+                            <a href="mailto:kadeshbanear@gmail.com?subject=Newsletter Subscription&body=I would like to subscribe to the Kadesh Barnea newsletter." class="btn btn-dark w-100 py-3">Subscribe via Email</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
@@ -697,8 +671,7 @@
         }
     })();
     </script>
-    <!-- Form Handler Javascript -->
-    <script src="js/form-handler.js"></script>
+
 </body>
 
 </html>
