@@ -450,6 +450,11 @@ h6,
     transition: .3s .15s;
 }
 
+.team-item .team-img img {
+    height: 400px;
+    object-fit: cover;
+}
+
 .team-item .team-img img,
 .blog-item .blog-img img  {
     transition: .5s;
