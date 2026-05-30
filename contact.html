@@ -6,7 +6,7 @@
     <title>Kadesh Barnea Services Ltd. - Contact Us</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="cyber services, branding, cereal trading, mobile banking, agribusiness, M-Pesa, Kenya, Siaya County" name="keywords">
-    <meta content="Kadesh Barnea Services Ltd. - Cyber Services, Branding, Cereal Trading, and Mobile Banking in Misori, Siaya County, Kenya" name="description">
+    <meta content="Kadesh Barnea Services Ltd. - Cyber Services, Branding, Cereal Trading, and Mobile Banking in Nairobi, Kenya" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -44,7 +44,7 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Misori, Siaya County, Kenya</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Nairobi, Kenya</small>
                     <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+254 703 615836</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>kadeshbanear@gmail.com</small>
                 </div>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="mb-2">Visit our office</h5>
-                            <h4 class="text-primary mb-0">Misori, Siaya County, Kenya</h4>
+                            <h4 class="text-primary mb-0">Nairobi, Kenya</h4>
                         </div>
                     </div>
                 </div>
@@ -234,12 +234,10 @@
                             <h1 class="m-0 text-white">Kadesh Barnea</h1>
                         </a>
                         <p class="mt-3 mb-4">Empowering individuals, institutions, and small businesses through accessible cyber services, quality agricultural products, and reliable mobile banking solutions.</p>
-                        <form action="newsletter_handler.php" method="POST">
-                            <input type="hidden" name="csrf_token" value="">
-                            <input type="text" name="honeypot" style="display:none;" value="">
+                        <form id="newsletterForm">
                             <div class="input-group">
-                                <input type="email" name="email" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
+                                <input type="email" name="email" class="form-control border-white p-3" placeholder="Your Email" required>
+                                <button class="btn btn-dark" type="submit">Sign Up</button>
                             </div>
                         </form>
                     </div>
@@ -252,7 +250,7 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">Misori, Siaya County, Kenya</p>
+                                <p class="mb-0">Nairobi, Kenya</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
@@ -303,7 +301,7 @@
             <div class="row justify-content-end">
                 <div class="col-lg-8 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; 2026 <a class="text-white border-bottom" href="#">Kadesh Barnea Services Ltd.</a>. All Rights Reserved.</p>
+                        <p class="mb-0">&copy; 2020 <a class="text-white border-bottom" href="#">Kadesh Barnea Services Ltd.</a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -390,6 +388,8 @@
         }
     })();
     </script>
+    <!-- Form Handler Javascript -->
+    <script src="js/form-handler.js"></script>
 </body>
 
 </html>
