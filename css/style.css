@@ -156,6 +156,10 @@ h6,
     color: #FFFFFF;
 }
 
+.navbar-brand img {
+    border-radius: 15px;
+}
+
 .navbar-dark .navbar-toggler {
     color: var(--primary) !important;
     border-color: var(--primary) !important;
