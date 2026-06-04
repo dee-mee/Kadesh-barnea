@@ -1,0 +1,66 @@
+# Disable directory listings
+Options -Indexes
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Remove .html extension
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [NC,L]
+
+    # Redirect .html to non-html (to avoid duplicate content)
+    RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+    RewriteRule ^ /%1 [L,R=301]
+
+    # Remove .php extension
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php [NC,L]
+
+    # Redirect .php to non-php (to avoid duplicate content)
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+    RewriteRule ^ /%1 [L,R=301]
+</IfModule>
+
+# Correct MIME types
+<IfModule mod_mime.c>
+    AddType text/css                .css
+    AddType text/javascript         .js
+    AddType application/javascript  .js
+    AddType image/svg+xml           .svg
+    AddType image/webp              .webp
+    AddType image/png               .png
+    AddType image/jpeg              .jpg .jpeg
+    AddType application/font-woff2  .woff2
+    AddType application/font-woff   .woff
+    AddType application/x-font-ttf  .ttf
+</IfModule>
+
+# Explicitly allow static assets
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|ico|woff|woff2|ttf|eot|webp)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Block direct access to sensitive PHP files
+<FilesMatch "^(config\.php|csrf\.php|rate_limit\.php)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Disable mod_security if enabled (common cause of 403 on InfinityFree)
+<IfModule mod_security.c>
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>

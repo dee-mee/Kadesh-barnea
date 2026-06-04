@@ -152,7 +152,8 @@ h6,
     color: var(--primary);
 }
 
-.navbar-dark .navbar-brand h1 {
+.navbar-dark .navbar-brand h1,
+.navbar-dark .navbar-brand .h1 {
     color: #FFFFFF;
 }
 
@@ -178,7 +179,8 @@ h6,
         color: var(--dark);
     }
 
-    .navbar-dark .navbar-brand h1 {
+    .navbar-dark .navbar-brand h1,
+    .navbar-dark .navbar-brand .h1 {
         color: var(--primary);
     }
 }
